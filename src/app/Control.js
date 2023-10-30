@@ -26,7 +26,7 @@ export function Control() {
                 const options = {
                   method: "DELETE",
                 };
-                fetch(`http://localhost:9999/topics`, options)
+                fetch(process.env.NEXT_PUBLIC_API_URL + `topics`, options)
                   .then((res) => res.json())
                   .then((result) => {
                     console.log(result);
